@@ -6,6 +6,8 @@ import { AuthSidebarComponent } from './components/auth-sidebar/auth-sidebar.com
 import { AuthContentComponent } from './components/auth-content/auth-content.component';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { AlertService } from './services/alert.service';
+import { AccountService } from './services/account.servce';
 
 @NgModule({
     imports: [
@@ -13,7 +15,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
         BsDropdownModule,
         RouterModule,
         ReactiveFormsModule,
-        FormsModule
+        FormsModule,
     ],
     declarations: [
         AuthNavbarComponent,
@@ -27,6 +29,10 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
         BsDropdownModule,
         ReactiveFormsModule,
         FormsModule
+    ],
+    providers: [
+        AlertService,
+        AccountService
     ]
 })
 export class SharedModule { }
