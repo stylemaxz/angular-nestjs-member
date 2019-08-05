@@ -35,6 +35,7 @@ export class LoginComponent implements ILoginComponent {
         this.account
             .onLogin(this.form.value)
             .then(res => {
+                this.alert.notify('Login Successful','info')
                 this.router.navigate(['/', AppUrl.Authen, AuthUrl.Dashboard])
             }).catch(err => {
                 this.alert.notify(err.Message)
